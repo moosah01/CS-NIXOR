@@ -1,0 +1,40 @@
+Module Module1
+
+    Sub Main()
+        Dim mName As String = " "
+        Dim mID As Integer = 0
+        Dim mobile As String = ""
+        Dim date As Date
+
+        FileOpen(1, "c:\vb\members.txt", OpenMode.Input)
+        FileOpen(2, "d:\vb\doosriwali.txt", OpenMode.Output)
+
+        While Not EOF(1)
+
+            Input(1, mID)
+            Input(1, mName)
+
+            Console.WriteLine("For member " & mID & ", name " & mName)
+            Console.Write("Enter your mobile number: ")
+            mobile = Console.ReadLine
+
+            Console.Write("When did his membership start: ")
+            date = Console.ReadLine
+            Console.WriteLine()
+
+            WriteLine(2, mID)
+            WriteLine(2, mName)
+            WriteLine(2, mobile)
+            WriteLine(2, date)
+           
+        End While
+
+        FileClose(1)
+        FileClose(2)
+
+        My.Computer.FileSystem.DeleteFile("c:\vb\members.txt")
+        My.Computer.FileSystem.RenameFile("d:\vb\doosriwali.txt", "members.txt")
+
+    End Sub
+
+End Module

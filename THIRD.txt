@@ -1,0 +1,45 @@
+Module Module1
+
+    Sub Main()
+        Dim mID As Integer = 0
+        Dim mName As String = " "
+        Dim NSF As String = " "
+        Dim isfound As Boolean
+        Dim continue As Boolean = True
+
+        While continue = True
+
+            FileOpen(1, "C:\vb\member.txt", OpenMode.Input)
+            isfound = False
+
+            Console.Write("Which name do you want to search for?: ")
+            NSF = Console.ReadLine
+
+            While Not EOF(1)
+
+                Input(1, mD)
+                Input(1, mName)
+
+                If mName = NSF Then
+                    isfound = True
+
+                    Console.WriteLine("the ID is: " & mID)
+                    Console.WriteLine()
+
+                    Console.Write("Would you like to enter more names? ")
+                    continue = Console.ReadLine
+
+                End If
+
+            End While
+
+            If isfound = False Then Console.WriteLine("THIS MEMBER DOES NOT EXIST ???????")
+            Console.WriteLine()
+
+            FileClose(1)
+
+        End While
+
+    End Sub
+
+End Module

@@ -1,0 +1,32 @@
+Module Module1
+
+    Sub Main()
+        Dim mName As String = " "
+        Dim mID As Integer = 0
+        Dim continue As Boolean = True
+
+        FileOpen(1, "c:\vb\members.txt", OpenMode.Append)
+
+        Do
+            Console.WriteLine("New member's id: ")
+            mID = Console.ReadLine
+
+            Console.WriteLine("Enter member name: ")
+            mName= Console.ReadLine
+            
+
+            WriteLine(1, mID)
+            WriteLine(1, membername)
+
+            Console.Write("More? ")
+            continue = Console.ReadLine
+           
+
+        Loop Until continue = False
+
+        FileClose(1)
+
+
+    End Sub
+
+End Module

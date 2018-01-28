@@ -1,0 +1,29 @@
+Module Module1
+
+    Sub Main()
+
+        Dim mName As String = ""
+        Dim mID As Integer = 0
+
+        FileOpen(1, "C:\vb\members.txt", OpenMode.Input)
+
+        While Not EOF(1)
+
+            Input(1, mID)
+            Input(1, mName)
+
+            Console.WriteLine("ID of the members: " & mID)
+
+            Console.WriteLine("name of the member: " & mName)
+
+         
+
+        End While
+
+        FileClose(1)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module

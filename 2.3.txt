@@ -1,0 +1,16 @@
+﻿Dim s As String
+        Dim first As Char
+        Dim symbol As Char = "*"
+        Dim nayawalaS As String
+        Console.Write("Enter string: ")
+        s = Console.ReadLine()
+        first = s(0)
+        nayawalaS = first
+        For i = 1 To Len(s) - 1
+            If s(i) <> first Then
+                nayawalaS = newS & s(i)
+            Else : nayawalaS = nayawalaS & symb
+            End If
+        Next
+        Console.WriteLine(nayawalaS)
+        Console.ReadKey()

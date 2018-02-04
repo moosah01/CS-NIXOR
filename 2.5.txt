@@ -1,0 +1,18 @@
+﻿Dim s1 As String
+        Dim a As Integer
+        Dim b As Integer
+        Console.Write("what string: ")
+        s1 = Console.ReadLine()
+        For i = 1 To Len(s1) - 2
+            If Mid(s1, i, 3) = "not" Then
+                a = i
+            ElseIf Mid(s, i, 3) = "bad" Then
+                b = i
+            End If
+        Next
+        If b > a And a > 0 Then
+            s = Mid(s1, 1, a - 1) & "good" & Mid(s1, b + 3)
+        End If
+
+        Console.WriteLine(s1)
+        Console.ReadKey()

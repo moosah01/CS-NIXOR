@@ -1,0 +1,27 @@
+﻿Dim a As String
+        Dim aAggay As String
+        Dim aPheeche As String
+        Dim b As String
+        Dim bAggay As String
+        Dim bPheeche As String
+        Console.Write("Enter  string no 1: ")
+        a = Console.ReadLine()
+        Console.Write("Enter string no 2: ")
+        b = Console.ReadLine()
+        If Len(a) Mod 2 = 0 Then
+            aAggay Mid(a, 1, Len(a) / 2)
+            aPheeche = Mid(a, Len(a) / 2 + 1)
+        Else
+            aAggay= Mid(a, 1, (Len(a) + 1) / 2)
+            aPheeche = Mid(a, (Len(a) + 3) / 2)
+        End If
+        If Len(b) Mod 2 = 0 Then
+            bAggay = Mid(b, 1, Len(b) / 2)
+            bPheeche = Mid(b, Len(b) / 2 + 1)
+        Else
+            bAggay = Mid(b, 1, (Len(b) + 1) / 2)
+            bPheeche = Mid(b, (Len(b) + 3) / 2)
+        End If
+        Console.WriteLine(aAgga & bAggay & aPheeche & bPheeche)
+        Console.ReadKey()
+

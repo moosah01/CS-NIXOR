@@ -1,0 +1,9 @@
+﻿Dim Count As Integer
+        Console.Write("how many donuts?: ")
+        Count = Console.ReadLine()
+        If Count < 10 Then
+            Console.WriteLine("No of Donuts: " & Count)
+        Else : Console.WriteLine("no of donuts: many")
+        End If
+        Console.ReadKey()
+

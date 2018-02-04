@@ -1,0 +1,10 @@
+﻿Dim stringOne As String
+        Dim stringTwo As String
+        Dim newString As String = ""
+        Console.Write("Enter first string: ")
+        stringeOne = Console.ReadLine()
+        Console.Write("Enter second string: ")
+        stringTwo = Console.ReadLine()
+        newString = Mid(stringTwo, 1, 2) & Mid(stringOne, 3) & " " & Mid(stringOne, 1, 2) & Mid(stringTwo, 3)
+        Console.WriteLine(newString)
+        Console.ReadKey

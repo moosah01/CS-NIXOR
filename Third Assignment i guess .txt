@@ -1,0 +1,55 @@
+Module Module1
+
+    Dim Letters(26) As Integer
+    Sub Main()
+        Dim count As Integer
+
+        For count = 1 To 26
+            Letters(count) = 0
+        Next
+
+        Call ReadFile()
+
+        Call OutputArray()
+
+        Console.ReadKey()
+
+    End Sub
+
+    Sub ReadFile()
+        Dim Fr As String = ""
+        FileOpen(1, "c:\Practices\mystrings.txt", OpenMode.Input)
+
+        While Not EOF(1)
+
+            Input(1, Fr)
+            Call UpdateArray(Fr)
+
+        End While
+
+        FileClose(1)
+    End Sub
+
+    Sub UpdateArray(ByVal Fr As String)
+        Dim count As Integer = 0
+        Dim Mychar As Char = ""
+
+        For count = 1 To Len(Fr)
+            Mychar = Mid(Fr, count, 1)
+
+            Letters(Asc(UCase(Mychar)) - 64) = Letters(Asc(UCase(Mychar)) - 64) + 1
+        Next
+    End Sub
+
+    Sub OutputArray()
+        Dim count As Integer = 0
+
+        Dim letterakela As Char = ""
+
+        For count = 65 To 90
+            letterakela = Chr(count)
+            Console.WriteLine(Letters(count - 64) & " = " & letterakela)
+        Next
+    End Sub
+
+End Module
